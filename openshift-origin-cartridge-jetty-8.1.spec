@@ -12,6 +12,17 @@ Requires:      openshift-origin-cartridge-abstract
 Requires:      rubygem(openshift-origin-node)
 Requires:      openshift-origin-node-util
 Requires:      httpd
+Requires:      java-1.7.0-openjdk
+Requires:      java-1.7.0-openjdk-devel
+%if 0%{?rhel}
+Requires:      maven3
+%endif
+%if 0%{?centos}
+Requires:      maven3
+%endif
+%if 0%{?fedora}
+Requires:      maven
+%endif
 BuildRequires: git
 BuildArch:     noarch
 
