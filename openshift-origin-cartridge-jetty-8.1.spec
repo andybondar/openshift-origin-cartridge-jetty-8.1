@@ -96,4 +96,5 @@ ln -s %{cartridgedir}/../abstract/info/bin/sync_gears.sh %{buildroot}%{cartridge
 
 
 %changelog
-
+* Fri Jul 05 2013 Andriy Bondar <abondar@mirantis.com> 1.9.2-1
+- new package built with tito
