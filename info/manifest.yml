@@ -1,19 +1,20 @@
-Name: diy-0.1
-Cartridge-Short-Name: DIY
-Cartridge-Vendor: redhat
-Display-Name: Do-It-Yourself
-Description: "The Do-It-Yourself (DIY) application type is a blank slate for trying unsupported languages, frameworks, and middleware on OpenShift. See the community site for examples of bringing your favorite framework to OpenShift."
-Version: 0.1
+Name: jetty-8.1
+Cartridge-Short-Name: JETTY
+Cartridge-Vendor: mirantis
+Display-Name: Jetty 8.1.11
+Description: "Jetty is a lightweight pure Java-based HTTP server and Java Servlet container, developed as a free and open source project by Eclise Foundation"
+Version: 8.1
 License: "ASL 2.0"
 License-Url: http://www.apache.org/licenses/LICENSE-2.0.txt
 Categories:
   - web_framework
   - experimental
-Website:
+  - java
+Website: http://www.eclipse.org/jetty/
 Help-Topics:
-  "Getting Started": https://www.openshift.com/community/videos/getting-started-with-diy-applications-on-openshift
+  "Jetty on OpenShift - Lightweight Java Web Serving for the Cloud": https://www.openshift.com/blogs/jetty-on-openshift-lightweight-java-web-serving-for-the-cloud
 Cart-Data:
-  - Key: OPENSHIFT_DIY_LOG_DIR
+  - Key: OPENSHIFT_JETTY_LOG_DIR
     Type: environment
     Description: "Directory to store application log files."
   - Key: OPENSHIFT_TMP_DIR
@@ -44,8 +45,8 @@ Cart-Data:
     Type: environment
     Description: "Unique ID which identified the gear. This value changes between gears."
 Provides:
-  - diy-0.1
-  - diy
+  - jetty-8.1
+  - jetty
 Publishes:
   publish-http-url:
     Type: "NET_TCP:httpd-proxy-info"

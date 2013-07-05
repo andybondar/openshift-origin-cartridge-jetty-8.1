@@ -25,4 +25,4 @@ oo-frontend-connect \
     --with-container-name "$application" \
     --with-namespace "$namespace" \
     --path "" --target "$IP:8080" --websocket \
-    --path "/health" --target "${CARTRIDGE_BASE_PATH}/diy-0.1/info/configuration/health.html" --file
+    --path "/health" --target "${CARTRIDGE_BASE_PATH}/jetty-8.1/info/configuration/health.html" --file

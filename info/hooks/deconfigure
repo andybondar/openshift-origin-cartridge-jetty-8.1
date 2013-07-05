@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Destroys diy instance
+# Destroys jetty instance
 
 function print_help {
     echo "Usage: $0 app-name namespace uuid"
 
-    echo "$0 $@" | logger -p local0.notice -t openshift_origin_diy_deconfigure
+    echo "$0 $@" | logger -p local0.notice -t openshift_origin_jetty_deconfigure
     exit 1
 }
 
@@ -22,7 +22,7 @@ done
 
 [ $# -eq 3 ] || print_help
 
-cartridge_type="diy-0.1"
+cartridge_type="jetty-8.1"
 source "/etc/openshift/node.conf"
 source ${CARTRIDGE_BASE_PATH}/abstract/info/lib/util
 

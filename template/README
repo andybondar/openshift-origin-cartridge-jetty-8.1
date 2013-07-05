@@ -39,7 +39,7 @@ of use.  The following list are some common variables but far from exhaustive:
 
     $OPENSHIFT_INTERNAL_IP            - IP Address assigned to the application
     $OPENSHIFT_APP_NAME               - Application name
-    $OPENSHIFT_HOMEDIR/diy-0.1        - Application dir
+    $OPENSHIFT_HOMEDIR/jetty-8.1        - Application dir
     $OPENSHIFT_HOMEDIR/app-root/data  - For persistent storage (between pushes)
     $OPENSHIFT_TMP_DIR                - Temp storage (unmodified files deleted after 10 days)
 
