@@ -78,7 +78,6 @@ ln -s %{cartridgedir}/../abstract/info/connection-hooks/set-nosql-db-connection-
 ln -s %{cartridgedir}/../abstract/info/bin/sync_gears.sh %{buildroot}%{cartridgedir}/info/bin/sync_gears.sh
 
 %files
-%doc COPYRIGHT LICENSE
 %dir %{cartridgedir}
 %dir %{cartridgedir}/info
 %dir %attr(0755,-,-) %{cartridgedir}/info/hooks
@@ -90,9 +89,12 @@ ln -s %{cartridgedir}/../abstract/info/bin/sync_gears.sh %{buildroot}%{cartridge
 %attr(0755,-,-) %{cartridgedir}/info/bin/
 %config(noreplace) %{cartridgedir}/info/configuration/
 %{_sysconfdir}/openshift/cartridges/%{name}
+%doc %{cartridgedir} COPYRIGHT LICENSE
+%doc %{cartridgedir} LICENSE
 %{cartridgedir}/info/changelog
 %{cartridgedir}/info/control
 %{cartridgedir}/info/manifest.yml
+%{cartridgedir}/info/jetty-distribution-8.1.11.v20130520.tar.gz
 
 
 %changelog
