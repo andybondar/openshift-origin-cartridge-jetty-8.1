@@ -56,6 +56,8 @@ mkdir -p %{buildroot}%{cartridgedir}/info/connection-hooks/
 mkdir -p %{buildroot}/%{_sysconfdir}/openshift/cartridges
 cp -rp info %{buildroot}%{cartridgedir}/
 cp -rp git_template.git %{buildroot}%{cartridgedir}/info/data/
+cp LICENSE %{buildroot}%{cartridgedir}/
+cp COPYRIGHT %{buildroot}%{cartridgedir}/
 ln -s %{cartridgedir}/info/configuration/ %{buildroot}/%{_sysconfdir}/openshift/cartridges/%{name}
 ln -s %{cartridgedir}/../abstract/info/hooks/add-module %{buildroot}%{cartridgedir}/info/hooks/add-module
 ln -s %{cartridgedir}/../abstract/info/hooks/info %{buildroot}%{cartridgedir}/info/hooks/info
