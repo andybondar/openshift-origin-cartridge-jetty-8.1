@@ -1,13 +1,13 @@
-Name: raw
-Version: 0.1
-Architecture: i686/x86_64
-Provides: raw
-Depends:
+Name: jetty-8.1
+Version: 8.1
+Architecture: noarch
+Provides: jetty
+Depends: java-1.7.0-openjdk
 Conflicts:
 Type: Cartridge
 Role: misc
 Vendor: www.openshift.com
-DisplayName: raw-0.1
-Bundles:  raw
+DisplayName: jetty-8.1
+Bundles: 
 Description: 
-Provides raw compute power
+Provides Jetty - open source Java Servlet container developed by Eclipse Foundation
