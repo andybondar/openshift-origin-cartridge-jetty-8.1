@@ -89,8 +89,8 @@ ln -s %{cartridgedir}/../abstract/info/bin/sync_gears.sh %{buildroot}%{cartridge
 %attr(0755,-,-) %{cartridgedir}/info/bin/
 %config(noreplace) %{cartridgedir}/info/configuration/
 %{_sysconfdir}/openshift/cartridges/%{name}
-%doc %{cartridgedir} COPYRIGHT
-%doc %{cartridgedir} LICENSE
+%doc %{cartridgedir}/COPYRIGHT
+%doc %{cartridgedir}/LICENSE
 %{cartridgedir}/info/changelog
 %{cartridgedir}/info/control
 %{cartridgedir}/info/manifest.yml
