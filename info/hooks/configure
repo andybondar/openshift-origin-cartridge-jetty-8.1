@@ -61,7 +61,6 @@ echo $JETTY_VERSION > ${JETTY_INSTANCE_DIR}/jetty-8.1.11/VERSION
 rm -rf ${JETTY_INSTANCE_DIR}/jetty-8.1.11/contexts/*
 rm -rf ${JETTY_INSTANCE_DIR}/jetty-8.1.11/webapps
 rm -rf ${JETTY_INSTANCE_DIR}/jetty-8.1.11/logs
-#cd ${JETTY_INSTANCE_DIR}/jetty-8.1.11/
 ln -s ${JETTY_INSTANCE_DIR}/logs ${JETTY_INSTANCE_DIR}/jetty-8.1.11/logs
 
 cp ${CARTRIDGE_BASE_PATH}/${cartridge_type}/info/configuration/maven.xml ${APP_HOME}/app-root/data/
