@@ -1,5 +1,4 @@
 #!/bin/bash
-#
 echo "Stop Application"
 
 cd $OPENSHIFT_HOMEDIR/jetty-8.1/run

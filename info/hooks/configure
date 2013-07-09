@@ -105,7 +105,6 @@ fi
 #
 # Create virtualhost definition for apache
 #
-#
 export CART_INFO_DIR
 import_env_vars
 $CART_INFO_DIR/bin/deploy_httpd_proxy.sh $application $namespace $uuid $IP
