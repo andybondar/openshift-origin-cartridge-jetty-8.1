@@ -2,3 +2,8 @@
 # This is a simple post deploy hook executed after your application 
 # is deployed and started.  This script gets executed directly, so 
 # it could be python, php, ruby, etc.
+# The logic to start up your application should be put in this
+# script. The application will work only if it binds to
+# $OPENSHIFT_INTERNAL_IP:8080
+echo "Start Application"
+nohup $OPENSHIFT_REPO_DIR/jetty/testrubyserver.rb $OPENSHIFT_INTERNAL_IP $OPENSHIFT_REPO_DIR/jetty > $OPENSHIFT_HOMEDIR/jetty-8.1/logs/server.log 2>&1 &

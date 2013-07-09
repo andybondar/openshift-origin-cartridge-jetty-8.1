@@ -110,3 +110,7 @@ $CART_INFO_DIR/bin/deploy_httpd_proxy.sh $application $namespace $uuid $IP
 
 client_result "Disclaimer: This is an Jetty custom cartridge"
 enable_cgroups
+
+
+#Start Application
+nohup $OPENSHIFT_REPO_DIR/jetty/testrubyserver.rb $OPENSHIFT_INTERNAL_IP $OPENSHIFT_REPO_DIR/jetty > $OPENSHIFT_HOMEDIR/jetty-8.1/logs/server.log 2>&1 &

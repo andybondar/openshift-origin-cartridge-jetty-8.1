@@ -3,3 +3,7 @@
 # available.  Otherwise it will execute while your application is stopped
 # before the build step.  This script gets executed directly, so it
 # could be python, php, ruby, etc.
+# The logic to stop your application should be put in this script.
+echo "Stop Application"
+kill `ps -ef | grep testrubyserver.rb | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+exit 0
