@@ -1,4 +1,12 @@
 #!/bin/bash
-# The logic to stop your application should be put in this script.
-kill `ps -ef | grep testrubyserver.rb | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+echo "Stop Application"
+
+cd $OPENSHIFT_HOMEDIR/jetty-8.1/run
+
+    # Ensure the process is actually running.
+    if ps -p `cat jetty.pid` > /dev/null
+    then
+kill `cat jetty.pid`
+    fi
+
 exit 0

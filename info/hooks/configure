@@ -62,6 +62,7 @@ rm -rf ${JETTY_INSTANCE_DIR}/jetty-8.1.11/contexts/*
 rm -rf ${JETTY_INSTANCE_DIR}/jetty-8.1.11/webapps
 rm -rf ${JETTY_INSTANCE_DIR}/jetty-8.1.11/logs
 ln -s ${JETTY_INSTANCE_DIR}/logs ${JETTY_INSTANCE_DIR}/jetty-8.1.11/logs
+ln -s ${APP_HOME}/app-root/runtime/repo/deployments ${JETTY_INSTANCE_DIR}/jetty-8.1.11/webapps
 
 cp ${CARTRIDGE_BASE_PATH}/${cartridge_type}/info/configuration/maven.xml ${APP_HOME}/app-root/data/
 
@@ -98,7 +99,7 @@ create_standard_path_env_var
 observe_setup_env_uservars_dir
 
 if [ -d $git_url ]; then
-    start_app
+    run_as_user "${CARTRIDGE_BASE_PATH}/${cartridge_type}/info/bin/app_ctl.sh start"
 fi
 
 #
