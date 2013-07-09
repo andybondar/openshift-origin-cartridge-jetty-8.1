@@ -4,4 +4,5 @@
 # before the build step.  This script gets executed directly, so it
 # could be python, php, ruby, etc.
 # The logic to stop your application should be put in this script.
+#
 app_ctl.sh stop
