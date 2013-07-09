@@ -52,13 +52,14 @@ JETTY_INSTANCE_DIR=$(get_cartridge_instance_dir "$cartridge_type")
 pushd "$JETTY_INSTANCE_DIR" > /dev/null
 create_standard_app_dirs
 
-tar -zxf ${CARTRIDGE_BASE_PATH}/${cartridge_type}/info/jetty-distribution-8.1.11.v20130520.tar.gz -C "$APP_HOME"
-mv -f ${APP_HOME}/jetty-distribution-8.1.11.v20130520/* ${JETTY_INSTANCE_DIR}/
-echo $JETTY_VERSION > ${JETTY_INSTANCE_DIR}/VERSION
-rm -rf ${APP_HOME}/jetty-distribution-8.1.11.v20130520/
+tar -zxf ${CARTRIDGE_BASE_PATH}/${cartridge_type}/info/jetty-distribution-8.1.11.v20130520.tar.gz -C "$JETTY_INSTANCE_DIR"
+echo $JETTY_VERSION > ${JETTY_INSTANCE_DIR}/jetty-distribution-8.1.11.v20130520/VERSION
 
-rm -rf ${JETTY_INSTANCE_DIR}/contexts/*
-rm -rf ${JETTY_INSTANCE_DIR}/webapps
+rm -rf ${JETTY_INSTANCE_DIR}/jetty-distribution-8.1.11.v20130520/contexts/*
+rm -rf ${JETTY_INSTANCE_DIR}/jetty-distribution-8.1.11.v20130520/webapps
+rm -rf ${JETTY_INSTANCE_DIR}/jetty-distribution-8.1.11.v20130520/logs
+cd ${JETTY_INSTANCE_DIR}/jetty-distribution-8.1.11.v20130520/
+ln -s ${JETTY_INSTANCE_DIR}/logs logs
 
 cp ${CARTRIDGE_BASE_PATH}/${cartridge_type}/info/configuration/maven.xml ${APP_HOME}/app-root/data/
 
