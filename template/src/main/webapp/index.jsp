@@ -24,7 +24,7 @@ limitations under the License.
     <body>
     <h1><i>jetty://</i></h1>
     <h3>${pageContext.servletContext.serverInfo}</h3>
-    <h4>If you're seeing this, you've successfully installed Jetty. Congratulations!</h4>
     <h3>Current time: <%= new java.util.Date()%></h3>
+    <h4>If you're seeing this, you've successfully installed Jetty. Congratulations!</h4>
     </body>
 </html>
