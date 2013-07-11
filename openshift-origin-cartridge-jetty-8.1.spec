@@ -36,8 +36,8 @@ cp -rp template/ git_template/
 cd git_template
 git init
 git add -f .
-git config user.email "builder@example.com"
-git config user.name "Template builder"
+git config user.email "abondar@mirantis.com"
+git config user.name "Andriy Bondar"
 git commit -m 'Creating template'
 cd ..
 git clone --bare git_template git_template.git
@@ -93,5 +93,5 @@ ln -s %{cartridgedir}/../abstract/info/bin/sync_gears.sh %{buildroot}%{cartridge
 
 
 %changelog
-* Fri Jul 05 2013 Andriy Bondar <abondar@mirantis.com> 1.9.2-1
+* Fri Jul 05 2013 Andriy Bondar <abondar@mirantis.com> 1.9.1-1
 - new package built with tito
