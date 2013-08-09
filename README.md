@@ -3,6 +3,7 @@ Jetty http-server and Java Servlet container
 Create rpm package using tito:
 
 git clone https://github.com/andybondar/openshift-origin-cartridge-jetty-8.1.git
+
 cd openshift-origin-cartridge-jetty-8.1
 tito init
 tito tag
